@@ -48,7 +48,7 @@ function acfslider($atts){
 						<div class="acf-slides">
 							<img src="<?php the_sub_field('slide_image'); ?>" />
 							<?php if($caption){ ?>
-								<span class="acf-slides-caption"><?php the_sub_field('slider_caption'); ?></span>
+								<span class="acf-slides-caption"><?php the_sub_field('slide_caption'); ?></span>
 							<?php } ?>
 						</div>
 					<?php }
