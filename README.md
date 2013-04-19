@@ -32,10 +32,7 @@ Theme is a compilation of the following:
 	
 ::Widgets
 
-
-
-
-[====================================================== [ Contents ] ==================================================================]
+[=============== [ Contents ] ==========================]
 
 [1]		Enqueue styles
 [2]		Enqueue scripts
@@ -61,7 +58,7 @@ Theme is a compilation of the following:
 	
 
 
-[1][===================[ Enqueue styles (add stylesheets) ]===========================================================================]
+[1][===================[ Enqueue styles (add stylesheets) ]===========================]
 	
 	file: /functions.php
 	line: 328
@@ -70,7 +67,7 @@ Theme is a compilation of the following:
 		add additonal stylesheets here, make sure you specify a unique handle name to avoid conflicts with plugins
 
 	
-[2][===================[ Enqueue scripts here (add javascript) ]=======================================================================]
+[2][===================[ Enqueue scripts here (add javascript) ]======================]
 	
 	file: /functions.php
 	line: 343
@@ -79,7 +76,7 @@ Theme is a compilation of the following:
 		add additonal scripts here, make sure you specify a unique handle name to avoid conflicts with plugins
 
 
-[3][===================[ Theme Support (custom header, custom background)]=============================================================]
+[3][===================[ Theme Support (custom header, custom background)]=============]
 
 	file: /library/bones.php
 	line: 57
@@ -90,7 +87,7 @@ Theme is a compilation of the following:
 		It can also be called from a plugin if attached to an action hook.
 
 	
-[4][===================[ Content Width ]================================================================================================]
+[4][===================[ Content Width ]===============================================]
 
 	file: /functions.php
 	line: 36
@@ -102,7 +99,7 @@ Theme is a compilation of the following:
 		since plugins can access the value stored in $content_width.
 	
 
-[5][===================[ Thumbnails Sizes ]==============================================================================================]
+[5][===================[ Thumbnails Sizes ]=============================================]
 
 	file: /functions.php
 	line: 42
@@ -127,7 +124,7 @@ Theme is a compilation of the following:
 		you like. Enjoy!
 
 	
-[6][====================[ Sidebar ]=======================================================================================================]
+[6][====================[ Sidebar ]======================================================]
 
 	file: /functions.php
 	line: 52
@@ -144,7 +141,7 @@ Theme is a compilation of the following:
 
 		sidebar-sidebar2.php
 
-[7][===================[ Post Formats ]===================================================================================================]	
+[7][===================[ Post Formats ]==================================================]	
 
 	file: /library/bones.php
 	line: 64
@@ -156,7 +153,7 @@ Theme is a compilation of the following:
 		 get_post_format($post->ID)
 
 
-[8][===================[ Menu Walker (Walker_Nav_Menu) ]===================================================================================]	
+[8][===================[ Menu Walker (Walker_Nav_Menu) ]==================================]	
 	
 	file: /functions.php
 	line: 251
@@ -164,7 +161,7 @@ Theme is a compilation of the following:
 		wp_nav menu format generated here
 		
 		
-[9][===================[ Menu (register_nav_menus) ]=======================================================================================]	
+[9][===================[ Menu (register_nav_menus) ]======================================]	
 	
 	file: /library/bones.php
 	line: 78
@@ -173,7 +170,7 @@ Theme is a compilation of the following:
 		add an additional custom menu
 
 	
-[10][===================[ Comments Layout ]================================================================================================]	
+[10][===================[ Comments Layout ]===============================================]	
 	
 	file: /functions.php
 	line: 104
@@ -181,7 +178,7 @@ Theme is a compilation of the following:
 		Comments layout markup, edit this to modify the layout of the comments section
 
 	
-[11][==================[ Editor styling ]==================================================================================================]
+[11][==================[ Editor styling ]===================================================]
 	
 	file: /functions.php
 	line: 314
@@ -191,7 +188,7 @@ Theme is a compilation of the following:
 		it should preview what it looks like on an actual page.
 
 	
-[12][===================[ Translation Files ]===============================================================================================]
+[12][===================[ Translation Files ]===============================================]
 	file: /library/bones.php
 	line: 12
 	wp codex: http://codex.wordpress.org/Function_Reference/load_textdomain.
@@ -199,7 +196,7 @@ Theme is a compilation of the following:
 		put .pot files indicated here
 
 	
-[13][===================[ bones_head_cleanup() ]============================================================================================]
+[13][===================[ bones_head_cleanup() ]============================================]
 
 	file: /library/bones.php
 	line: 19
@@ -216,7 +213,7 @@ Theme is a compilation of the following:
 			WP version
 	
 	
-[14][===================[ bones_wpsearch() [search form]  ]=================================================================================]	
+[14][===================[ bones_wpsearch() [search form]  ]==================================]	
 	
 	file: /functions.php
 	line: 161
@@ -224,7 +221,7 @@ Theme is a compilation of the following:
 		Search form layout
 
 	
-[15][===================[ bones_main_nav() [main navigation] ]==============================================================================]	
+[15][===================[ bones_main_nav() [main navigation] ]================================]	
 	
 	file: /library/bones.php
 	line: 96
@@ -235,7 +232,7 @@ Theme is a compilation of the following:
 			line: 251
 
 	
-[16][===================[ bones_footer_links() [footer navigation] ]========================================================================]	
+[16][===================[ bones_footer_links() [footer navigation] ]==========================]	
 	
 	file: /library/bones.php
 	line: 110
@@ -243,7 +240,7 @@ Theme is a compilation of the following:
 		function used to show wp_nav_menu on footer
 
 
-[17][===================[ bones_related_posts() ]===========================================================================================]	
+[17][===================[ bones_related_posts() ]=============================================]	
 	
 	file: /library/bones.php
 	line: 137
@@ -251,7 +248,7 @@ Theme is a compilation of the following:
 		show related post in relation with post's "post tag"
 	
 	
-[18][===================[ page_navi() (post pagination) ]===================================================================================]	
+[18][===================[ page_navi() (post pagination) ]=====================================]	
 
 	file: /library/bones.php
 	line: 162
@@ -262,7 +259,7 @@ Theme is a compilation of the following:
 		<?php $posts_array = get_posts('posts_per_page'  => 5); ?> 
 	
 	
-[19][===================[ get_wpbs_theme_options() ]=========================================================================================]	
+[19][===================[ get_wpbs_theme_options() ]==========================================]	
 
 	file: /functions.php
 	line: 364	
@@ -270,7 +267,7 @@ Theme is a compilation of the following:
 		theme options code for adding frontend styles on pages/
 
 	
-[20][===================[ getACFfield() ]====================================================================================================]	
+[20][===================[ getACFfield() ]=====================================================]	
 
 	file: /functions.php
 	line: 488	
@@ -284,17 +281,20 @@ Theme is a compilation of the following:
 		@notlink	boolean		true/false if function is used on an href attribute //Revise
 	
 	Usage:	
-	<?php getACFfield('section_link','section_specials','option',true,false) ?>	fieldname section_link under parent field section_specials, options page, is a repeater field, false to be used on tag attribute
+	<?php getACFfield('section_link','section_specials','option',true,false) ?>	
+	fieldname section_link under parent field section_specials, options page, is a repeater field, false to be used on tag attribute
+	
 	<?php getACFfield('section_content','section_specials','option',true) ?>		
 	<?php getACFfield('section_content','','option',true) ?>
 	<?php getACFfield('section_content','','',true) ?>
 	
 
-[21][===================[ acfslider() (advance custom fields ) ]=============================================================================]	
+[21][===================[ acfslider() (advance custom fields ) ]================================]	
 
 	file: library/acf-templates/acf-slides.php
 	description:
-		Template for slider integration, uses Cycle2 jquery plugin http://www.malsup.com/jquery/cycle2/ check link for parameters
+		Template for slider integration, 
+		uses Cycle2 jquery plugin http://www.malsup.com/jquery/cycle2/ check link for parameters
 	Usage:
 		templates:
 			<?php 
