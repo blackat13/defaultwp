@@ -57,7 +57,7 @@ function bones_register_sidebars() {
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
-    ));
+		)); 
     
     register_sidebar(array(
     	'id' => 'sidebar2',
@@ -69,6 +69,16 @@ function bones_register_sidebars() {
     	'after_title' => '</h4>',
     ));
     
+	register_sidebar(array(
+    	'id' => 'sidebar-right',
+    	'name' => 'right Sidebar',
+    	'description' => 'Used on page with right sidebar',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+    	'before_title' => '<h4 class="widgettitle">',
+    	'after_title' => '</h4>',
+    ));
+	
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',

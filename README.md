@@ -1,64 +1,75 @@
-Abelltech theme
-Author: charlie
+# Abelltech theme #
 
 Theme is a compilation of the following:
-	WP bootstrap 			http://320press.com/wpbs/
-	Bones Theme 			http://themble.com/bones/
-	Options Framework		http://www.wptheming.com
-	HTML5 Boilerplate		http://html5boilerplate.com/
+
+* WP bootstrap http://320press.com/wpbs/ 
+* Bones Theme http://themble.com/bones/ 
+* Options Framewor khttp://www.wptheming.com 
+* HTML5 Boilerplat ehttp://html5boilerplate.com/ 
+
+***
 
 ::Features
-	LESS/SASS
-	Responsive
-	twitter bootstrap
-	options framework //option.php
-	
+
+* LESS/SASS
+* Responsive
+* twitter bootstrap
+* options framework //option.php
+
+***
+
 :::Menus
-	Main Menu
-	Footer Links
+
+* Main Menu
+* Footer Links
 	
 ::PLugins
-	Advanced Custom Fields
-		Flexible Content Field
-		Gallery Field
-		Options Page
-		Repeater Field
-	Contact form 7
-	WordPress SEO by Yoast
+
+* Advanced Custom Fields (ACF)
+* ACF -	Flexible Content Field
+* ACF -	Gallery Field
+* ACF -	Options Page
+* ACF -	Repeater Field
+* Bugherd
+* Contact form 7
+* WordPress SEO by Yoast
+* AddThis Social Bookmarking Widget
 	
 ::Custom plugins
-	bones_related_posts()
-	
-	
-::Widgets
 
-[=============== [ Contents ] ==========================]
-
-[1]		Enqueue styles
-[2]		Enqueue scripts
-[3]		Theme Support
-[4]		Content Width
-[5]		Thumbnails
-[6]		Sidebar
-[7]		Post Formats
-[8]		Menu Walker (Walker_Nav_Menu)
-[9]		Menu (register_nav_menus)
-[10]	Comments Layout
-[11]	Editor styling
-[12]	Translation Files
-[13]	bones_head_cleanup()
-[14]	bones_wpsearch() [ search form ]
-[15]	bones_main_nav() [ main navigation ]
-[16]	bones_footer_links() [footer navigation]
-[17]	bones_related_posts()
-[18]	page_navi() [post pagination]
-[19]	get_wpbs_theme_options()
-[20]	getACFfield()
-[21]	acfslider() [advance custom fields jquery slider]
+* bones_related_posts()
 	
 
+## Contents ##
 
-[1][===================[ Enqueue styles (add stylesheets) ]===========================]
+* [1]	Enqueue styles	
+* [2]	Enqueue scripts 
+* [3]	Theme Support 
+* [4]	Content Width 
+* [5]	Thumbnails 
+* [6]	Sidebar 
+* [7]	Post Formats 
+* [8]	Menu Walker (Walker_Nav_Menu) 
+* [9]	Menu (register_nav_menus) 
+* [10]	Comments Layout 
+* [11]	Editor styling 
+* [12]	Translation Files 
+* [13]	bones_head_cleanup() 
+* [14]	bones_wpsearch() [ search form ] 
+* [15]	bones_main_nav() [ main navigation ] 
+* [16]	bones_footer_links() [footer navigation] 
+* [17]	bones_related_posts() 
+* [18]	page_navi() [post pagination] 
+* [19]	get_wpbs_theme_options() 
+* [20]	getACFfield()
+* [21]	acfslider() [advance custom fields jquery slider] 
+	
+
+	
+	
+	
+
+### [1] Enqueue styles - add stylesheets ###
 	
 	file: /functions.php
 	line: 328
@@ -67,7 +78,7 @@ Theme is a compilation of the following:
 		add additonal stylesheets here, make sure you specify a unique handle name to avoid conflicts with plugins
 
 	
-[2][===================[ Enqueue scripts here (add javascript) ]======================]
+### [2] Enqueue scripts - add javascript ###
 	
 	file: /functions.php
 	line: 343
@@ -76,7 +87,7 @@ Theme is a compilation of the following:
 		add additonal scripts here, make sure you specify a unique handle name to avoid conflicts with plugins
 
 
-[3][===================[ Theme Support (custom header, custom background)]=============]
+### [3] Theme Support - custom header, custom background ###
 
 	file: /library/bones.php
 	line: 57
@@ -87,7 +98,7 @@ Theme is a compilation of the following:
 		It can also be called from a plugin if attached to an action hook.
 
 	
-[4][===================[ Content Width ]===============================================]
+### [4] Content Width ] ###
 
 	file: /functions.php
 	line: 36
@@ -99,13 +110,22 @@ Theme is a compilation of the following:
 		since plugins can access the value stored in $content_width.
 	
 
-[5][===================[ Thumbnails Sizes ]=============================================]
+### [5] Thumbnails Sizes ###
 
 	file: /functions.php
 	line: 42
 	description:
 		programatically add thumbnails here, remember to rebuild thumnials using the AJAX Thumbnail Rebuild plugin.
 		you should be able to rebuild the thumbs
+		
+		the_post_thumbnail();                  // without parameter -> Thumbnail
+
+		the_post_thumbnail('thumbnail');       // Thumbnail (default 150px x 150px max)
+		the_post_thumbnail('medium');          // Medium resolution (default 300px x 300px max)
+		the_post_thumbnail('large');           // Large resolution (default 640px x 640px max)
+		the_post_thumbnail('full');            // Original image resolution (unmodified)
+
+		the_post_thumbnail( array(100,100) );  // Other resolutions
 
 		to add more sizes, simply copy a line from above 
 		and change the dimensions & name. As long as you upload a "featured image" as large as the biggest
@@ -124,7 +144,7 @@ Theme is a compilation of the following:
 		you like. Enjoy!
 
 	
-[6][====================[ Sidebar ]======================================================]
+### [6] Sidebar ] ###
 
 	file: /functions.php
 	line: 52
@@ -132,7 +152,8 @@ Theme is a compilation of the following:
 		to add more sidebars or widgetized areas, just copy and edit the above sidebar code. In order to call
 		your new sidebar just use the following code:
 
-		NOTEEEEEEEEEEEEEEEEEEEEe
+		<?php get_sidebar('sidebar2'); // sidebar 2 ?>
+		
 		Just change the name to whatever your new
 
 		sidebar's id is, for example:
@@ -141,7 +162,7 @@ Theme is a compilation of the following:
 
 		sidebar-sidebar2.php
 
-[7][===================[ Post Formats ]==================================================]	
+### [7] Post Formats ] ###
 
 	file: /library/bones.php
 	line: 64
@@ -151,17 +172,17 @@ Theme is a compilation of the following:
 		use this to specify multiple post formats for posts
 		ex:
 		 get_post_format($post->ID)
+	note: this is commented out form code
 
-
-[8][===================[ Menu Walker (Walker_Nav_Menu) ]==================================]	
+### [8] Menu Walker - Walker_Nav_Menu ###
 	
 	file: /functions.php
 	line: 251
 	description:
-		wp_nav menu format generated here
+		wp_nav menu format generated here, includes descip
 		
 		
-[9][===================[ Menu (register_nav_menus) ]======================================]	
+### [9] Menu - register_nav_menus ###
 	
 	file: /library/bones.php
 	line: 78
@@ -170,7 +191,7 @@ Theme is a compilation of the following:
 		add an additional custom menu
 
 	
-[10][===================[ Comments Layout ]===============================================]	
+### [10] Comments Layout ] ###
 	
 	file: /functions.php
 	line: 104
@@ -178,7 +199,7 @@ Theme is a compilation of the following:
 		Comments layout markup, edit this to modify the layout of the comments section
 
 	
-[11][==================[ Editor styling ]===================================================]
+### [11] Editor styling ] ###
 	
 	file: /functions.php
 	line: 314
@@ -188,7 +209,7 @@ Theme is a compilation of the following:
 		it should preview what it looks like on an actual page.
 
 	
-[12][===================[ Translation Files ]===============================================]
+### [12] Translation Files ###
 
 	file: /library/bones.php
 	line: 12
@@ -197,7 +218,7 @@ Theme is a compilation of the following:
 		put .pot files indicated here
 
 	
-[13][===================[ bones_head_cleanup() ]============================================]
+### [13] bones_head_cleanup() ###
 
 	file: /library/bones.php
 	line: 19
@@ -214,7 +235,7 @@ Theme is a compilation of the following:
 			WP version
 	
 	
-[14][===================[ bones_wpsearch() [search form]  ]==================================]	
+### [14] bones_wpsearch() - search form  ###
 	
 	file: /functions.php
 	line: 161
@@ -222,7 +243,7 @@ Theme is a compilation of the following:
 		Search form layout
 
 	
-[15][===================[ bones_main_nav() [main navigation] ]================================]	
+### [15] bones_main_nav() - main navigation ###
 	
 	file: /library/bones.php
 	line: 96
@@ -233,7 +254,7 @@ Theme is a compilation of the following:
 			line: 251
 
 	
-[16][===================[ bones_footer_links() [footer navigation] ]==========================]	
+### [16] bones_footer_links() - footer navigation  ###
 	
 	file: /library/bones.php
 	line: 110
@@ -241,7 +262,7 @@ Theme is a compilation of the following:
 		function used to show wp_nav_menu on footer
 
 
-[17][===================[ bones_related_posts() ]=============================================]	
+### [17] bones_related_posts() ###
 	
 	file: /library/bones.php
 	line: 137
@@ -249,7 +270,7 @@ Theme is a compilation of the following:
 		show related post in relation with post's "post tag"
 	
 	
-[18][===================[ page_navi() (post pagination) ]=====================================]	
+### [18] page_navi() - post pagination ###
 
 	file: /library/bones.php
 	line: 162
@@ -260,7 +281,7 @@ Theme is a compilation of the following:
 		<?php $posts_array = get_posts('posts_per_page'  => 5); ?> 
 	
 	
-[19][===================[ get_wpbs_theme_options() ]==========================================]	
+### [19] get_wpbs_theme_options() ###
 
 	file: /functions.php
 	line: 364	
@@ -268,7 +289,7 @@ Theme is a compilation of the following:
 		theme options code for adding frontend styles on pages/
 
 	
-[20][===================[ getACFfield() ]=====================================================]	
+### [20] getACFfield() ###
 
 	file: /functions.php
 	line: 488	
@@ -290,13 +311,17 @@ Theme is a compilation of the following:
 	<?php getACFfield('section_content','','',true) ?>
 	
 
-[21][===================[ acfslider() (advance custom fields ) ]================================]	
+### [21] acfslider() - advance custom fields with cycle2 slider ###
 
 	file: library/acf-templates/acf-slides.php
 	description:
 		Template for slider integration, 
 		uses Cycle2 jquery plugin http://www.malsup.com/jquery/cycle2/ check link for parameters
 	Usage:
+		ACF subdfields should be desclared as
+			slide_image for the slider image
+			slide_caption for the slider caption
+			
 		templates:
 			<?php 
 				$param['fieldname'] = 'homepage_slider';
@@ -311,24 +336,26 @@ Theme is a compilation of the following:
 		shortcode:
 			[acfslider caption=true fieldname='homepage_slider' param="data-cycle-fx=scrollHorz data-cycle-timeout=2000"]
 			
-			
-:::Reference sites
 
-Yoast SEO guides here
-http://yoast.com/articles/wordpress-seo/
+### Reference sites ###
+<code>
 
-Responsive guides
-http://webdesignerwall.com/tutorials/setting-breakpoints-in-responsive-design
-http://webdesignerwall.com/tutorials/5-useful-css-tricks-for-responsive-design
+	Yoast SEO guides here
+	http://yoast.com/articles/wordpress-seo/
 
-twitter bootstrap shortcodes
-http://320press.com/wpbs/features/shortcode-reference/
+	Responsive guides 
+	http://webdesignerwall.com/tutorials/setting-breakpoints-in-responsive-design
+	http://webdesignerwall.com/tutorials/5-useful-css-tricks-for-responsive-design
 
-Bones theme
-http://wp.tutsplus.com/tutorials/theme-development/making-a-theme-with-bones-getting-started/
+	Twitter bootstrap shortcodes
+	http://320press.com/wpbs/features/shortcode-reference/
 
-cycle2 parameters used for $param
-http://www.malsup.com/jquery/cycle2/
+	Bones theme
+	http://wp.tutsplus.com/tutorials/theme-development/making-a-theme-with-bones-getting-started/)
 
-LESS compiler for windows
-http://winless.org/
+	Cycle2 parameters used for $param
+	http://www.malsup.com/jquery/cycle2/
+
+	LESS compiler for windows
+	http://winless.org/
+</code>

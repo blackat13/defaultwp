@@ -1,5 +1,5 @@
-Abelltech theme
-Author: charlie
+# Abelltech theme #
+# Author: charlie #
 
 Theme is a compilation of the following:
 	WP bootstrap 			http://320press.com/wpbs/

@@ -152,27 +152,14 @@ function optionsframework_options() {
 						"std" => "1",
 						"type" => "checkbox");
 						
-	$options[] = array( "name" => "Blog page 'hero' unit",
-						"desc" => "Display blog page hero unit",
-						"id" => "blog_hero",
-						"std" => "1",
-						"type" => "checkbox");
+	
 	
 	$options[] = array( "name" => "CSS",
 						"desc" => "Additional CSS",
 						"id" => "wpbs_css",
 						"std" => "",
 						"type" => "textarea");
-	
-	$options[] = array( "name" => "Social Icons",
-						"type" => "heading");
-						
-	$options[] = array( "name" => "Addthis code",
-						"desc" => "Social Button script",
-						"id" => "abelltech_sc",
-						"std" => "",
-						"type" => "textarea");
-	
+
 	
 	return $options;
 }
