@@ -189,6 +189,7 @@ Theme is a compilation of the following:
 
 	
 [12][===================[ Translation Files ]===============================================]
+
 	file: /library/bones.php
 	line: 12
 	wp codex: http://codex.wordpress.org/Function_Reference/load_textdomain.

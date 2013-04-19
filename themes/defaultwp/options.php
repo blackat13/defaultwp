@@ -163,7 +163,17 @@ function optionsframework_options() {
 						"id" => "wpbs_css",
 						"std" => "",
 						"type" => "textarea");
-									
+	
+	$options[] = array( "name" => "Social Icons",
+						"type" => "heading");
+						
+	$options[] = array( "name" => "Addthis code",
+						"desc" => "Social Button script",
+						"id" => "abelltech_sc",
+						"std" => "",
+						"type" => "textarea");
+	
+	
 	return $options;
 }
 
